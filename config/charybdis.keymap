@@ -1,10 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-
 
 &lt {
     tapping-term-ms = <200>;
@@ -13,34 +10,51 @@
 };
 
 / {
-
-   keymap {
+    keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+        main {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4     &kp N5      &kp N6     &kp N7     &kp N8     &kp N9            &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W   &kp E         &kp R      &kp T       &kp Y      &kp U      &kp I      &kp O             &kp P     &kp BSLH
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F      &kp G       &kp H      &kp J      &kp K      &kp L             &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z   &kp X   &kp C         &kp V      &kp B       &kp N      &kp M      &kp COMMA  &kp LEFT_BRACKET  &kp FSLH  &kp MINUS
-                                &kp LEFT_ALT  &kp SPACE  &to 1       &kp LWIN   &kp SPACE
-                                              &mkp MB1   &mkp MB2    &kp ENTER
+&kp ESC  &kp N1  &kp N2  &kp N3     &kp N4          &kp N5          &kp N6      &kp N7         &kp N8     &kp N9      &kp N0    &kp BACKSPACE
+&kp TAB  &kp Q   &kp W   &kp E      &kp R           &kp T           &kp Y       &kp U          &kp I      &kp O       &kp P     &kp BSLH
+&kp TAB  &kp A   &kp S   &kp D      &kp F           &kp G           &kp H       &kp J          &kp K      &kp L       &kp SEMI  &kp SQT
+&to 1    &kp Z   &kp X   &kp C      &kp V           &kp B           &kp N       &kp M          &kp COMMA  &kp PERIOD  &kp FSLH  &to 2
+                         &kp SPACE  &kp LCTRL       &kp LEFT_WIN    &kp ENTER   &kp BACKSPACE
+                                    &kp LEFT_SHIFT  &kp LEFT_ALT    &kp ESCAPE
             >;
-
-
         };
 
-        layer_1 {
+        mouse {
             bindings = <
-&kp F1          &kp F2           &kp F3           &kp F4           &kp F5           &kp F6        &kp F7     &kp F8       &kp F9          &kp F10        &kp F11   &kp F12
-&kp CAPS        &none            &none            &none            &none            &none         &none      &none        &kp UP          &none          &none     &none
-&kp LEFT_SHIFT  &none            &none            &none            &bt BT_NXT       &bt BT_CLR    &none      &kp LEFT    &kp DOWN         &kp RIGHT      &none     &none
-&kp LCTRL       &none            &none            &none            &none            &none         &none      &none       &kp PERIOD    &kp RIGHT_BRACKET  &none    &kp EQUAL
-                                                  &kp LEFT_ALT     &kp SPACE        &to 0         &none      &none
-                                                                   &mkp MB1         &mkp MB2      &kp ENTER
+&kp F1    &kp F2  &kp F3    &kp F4    &kp F5     &kp F6    &kp F7  &kp F8    &kp F9    &kp F10   &kp F11  &kp F12
+&kp CAPS  &none   &none     &kp UP    &none      &none     &none   &none     &none     &none     &none    &none
+&none     &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none   &mkp MB1  &mkp MB2  &mkp MB3  &none    &none
+&to 0     &trans  &trans    &trans    &trans     &none     &none   &none     &none     &none     &none    &to 3
+                            &trans    &trans     &trans    &trans  &trans
+                                      &trans     &trans    &trans
             >;
+        };
 
-          
+        numbers {
+            bindings = <
+&none   &none  &kp LS(AT)    &kp LS(DLLR)   &kp LS(POUND)  &none           &none          &none         &kp LS(CARET)  &none         &none          &none
+&none   &none  &kp LS(LT)    &kp EQUAL      &kp LS(GT)     &kp GRAVE       &kp SQT        &kp LBKT      &kp LS(UNDER)  &kp RBKT      &none          &none
+&trans  &none  &kp LS(LPAR)  &kp MINUS      &kp LS(RPAR)   &kp LS(PLUS)    &kp LS(PRCNT)  &kp LS(LBRC)  &kp SEMI       &kp LS(RBRC)  &kp LS(EXCL)   &none
+&to 3   &none  &kp LS(STAR)  &kp LS(COLON)  &kp FSLH       &none           &none          &kp LS(PIPE)  &none          &kp LS(AMPS)  &kp LS(QMARK)  &to 0
+                             &trans         &trans         &trans          &trans         &trans
+                                            &trans         &trans          &trans
+            >;
+        };
+
+        system_plus_scroll {
+            bindings = <
+&kp F1    &kp F2  &kp F3    &kp F4    &kp F5     &kp F6        &kp F7  &kp F8    &kp F9    &kp F10   &kp F11  &kp F12
+&kp CAPS  &none   &none     &kp UP    &none      &bt BT_NXT    &none   &none     &none     &none     &none    &none
+&none     &none   &kp LEFT  &kp DOWN  &kp RIGHT  &bt BT_CLR    &none   &mkp MB1  &mkp MB2  &mkp MB3  &none    &none
+&to 0     &trans  &trans    &trans    &trans     &none         &none   &none     &none     &none     &none    &to 0
+                            &trans    &trans     &trans        &trans  &trans
+                                      &trans     &trans        &trans
+            >;
         };
 
         /* layer_2 {
@@ -97,6 +111,3 @@
         };*/
     };
 };
-
-
-
