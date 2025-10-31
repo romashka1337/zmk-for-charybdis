@@ -27,7 +27,7 @@
         mouse {
             bindings = <
 &kp F1    &kp F2  &kp F3    &kp F4    &kp F5     &kp F6    &kp F7  &kp F8    &kp F9    &kp F10   &kp F11  &kp F12
-&kp CAPS  &none   &none     &kp UP    &none      &none     &none   &none     &none     &none     &none    &none
+&kp CAPS  &trans  &none     &kp UP    &none      &none     &none   &none     &none     &none     &none    &none
 &trans    &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none   &mkp MB1  &mkp MB3  &mkp MB2  &mo 3    &none
 &to 0     &trans  &trans    &trans    &trans     &none     &none   &none     &none     &none     &none    &none
                             &trans    &trans     &trans    &trans  &trans
@@ -37,23 +37,23 @@
 
         numbers {
             bindings = <
-&none   &none  &kp LS(AT)    &kp LS(DLLR)   &kp LS(POUND)  &none           &none          &none         &kp LS(CARET)  &none         &none          &none
-&none   &none  &kp LS(LT)    &kp EQUAL      &kp LS(GT)     &kp GRAVE       &kp SQT        &kp LBKT      &kp LS(UNDER)  &kp RBKT      &none          &none
-&trans  &none  &kp LS(LPAR)  &kp MINUS      &kp LS(RPAR)   &kp LS(PLUS)    &kp LS(PRCNT)  &kp LS(LBRC)  &kp SEMI       &kp LS(RBRC)  &kp LS(EXCL)   &none
-&none   &none  &kp LS(STAR)  &kp LS(COLON)  &kp FSLH       &none           &none          &kp LS(PIPE)  &none          &kp LS(AMPS)  &kp LS(QMARK)  &to 0
-                             &trans         &trans         &trans          &trans         &trans
-                                            &trans         &trans          &trans
+&none   &none   &kp LS(AT)    &kp LS(DLLR)   &kp LS(POUND)  &none           &none          &none         &kp LS(CARET)  &none         &none          &none
+&none   &trans  &kp LS(LT)    &kp EQUAL      &kp LS(GT)     &kp GRAVE       &kp SQT        &kp LBKT      &kp LS(UNDER)  &kp RBKT      &none          &none
+&trans  &none   &kp LS(LPAR)  &kp MINUS      &kp LS(RPAR)   &kp LS(PLUS)    &kp LS(PRCNT)  &kp LS(LBRC)  &kp SEMI       &kp LS(RBRC)  &kp LS(EXCL)   &none
+&none   &none   &kp LS(STAR)  &kp LS(COLON)  &kp FSLH       &none           &none          &kp LS(PIPE)  &none          &kp LS(AMPS)  &kp LS(QMARK)  &to 0
+                              &trans         &trans         &trans          &trans         &trans
+                                             &trans         &trans          &trans
             >;
         };
 
         system_plus_scroll {
             bindings = <
-&kp F1    &kp F2  &kp F3    &kp F4    &kp F5     &kp F6        &kp F7  &kp F8    &kp F9    &kp F10   &kp F11  &kp F12
-&kp CAPS  &none   &none     &kp UP    &none      &bt BT_NXT    &none   &none     &none     &none     &none    &none
-&none     &none   &kp LEFT  &kp DOWN  &kp RIGHT  &bt BT_CLR    &none   &mkp MB1  &mkp MB3  &mkp MB2  &none    &none
-&to 0     &trans  &trans    &trans    &trans     &none         &none   &none     &none     &none     &none    &to 0
-                            &trans    &trans     &trans        &trans  &trans
-                                      &trans     &trans        &trans
+&kp F1  &kp F2  &kp F3    &kp F4    &kp F5     &kp F6        &kp F7  &kp F8    &kp F9    &kp F10   &kp F11  &kp F12
+&none   &trans  &none     &kp UP    &none      &bt BT_NXT    &none   &none     &none     &none     &none    &none
+&trans  &none   &kp LEFT  &kp DOWN  &kp RIGHT  &bt BT_CLR    &none   &mkp MB1  &mkp MB3  &mkp MB2  &none    &none
+&to 0   &trans  &trans    &trans    &trans     &none         &none   &none     &none     &none     &none    &to 0
+                          &trans    &trans     &trans        &trans  &trans
+                                    &trans     &trans        &trans
             >;
         };
 
