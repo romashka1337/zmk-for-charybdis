@@ -37,12 +37,12 @@
 
         numbers {
             bindings = <
-&none   &none   &kp LS(AT)    &kp LS(DLLR)   &kp LS(POUND)  &none           &none          &none         &kp LS(CARET)  &none         &none          &none
-&none   &trans  &kp LS(LT)    &kp EQUAL      &kp LS(GT)     &kp GRAVE       &kp SQT        &kp LBKT      &kp LS(UNDER)  &kp RBKT      &none          &none
-&trans  &none   &kp LS(LPAR)  &kp MINUS      &kp LS(RPAR)   &kp LS(PLUS)    &kp LS(PRCNT)  &kp LS(LBRC)  &kp SEMI       &kp LS(RBRC)  &kp LS(EXCL)   &none
-&none   &none   &kp LS(STAR)  &kp LS(COLON)  &kp FSLH       &none           &none          &kp LS(PIPE)  &none          &kp LS(AMPS)  &kp LS(QMARK)  &to 0
-                              &trans         &trans         &trans          &trans         &trans
-                                             &trans         &trans          &trans
+&none   &none          &kp LS(AT)    &kp LS(DLLR)   &kp LS(POUND)  &none           &none          &none         &kp LS(CARET)  &none         &none          &none
+&none   &trans         &kp LS(LT)    &kp EQUAL      &kp LS(GT)     &kp GRAVE       &kp SQT        &kp LBKT      &kp LS(UNDER)  &kp RBKT      &none          &none
+&trans  &kp BACKSLASH  &kp LS(LPAR)  &kp MINUS      &kp LS(RPAR)   &kp LS(PLUS)    &kp LS(PRCNT)  &kp LS(LBRC)  &kp SEMI       &kp LS(RBRC)  &kp LS(EXCL)   &none
+&none   &none          &kp LS(STAR)  &kp LS(COLON)  &kp FSLH       &none           &none          &kp LS(PIPE)  &none          &kp LS(AMPS)  &kp LS(QMARK)  &to 0
+                                     &trans         &trans         &trans          &trans         &trans
+                                                    &trans         &trans          &trans
             >;
         };
 
